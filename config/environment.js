@@ -1,8 +1,8 @@
 // set up port and dbURI
 
 
-const port = 4000
-const dbURI = 'mongodb://localhost/restful-api'
-const secret = 'open sesame'
+const port = process.env.PORT || 4000
+const dbURI = process.env.MONGODDB_URI || 'mongodb://localhost/restful-api'
+const secret = process.env.SECRET || 'open sesame'
 
 module.exports = { port, dbURI, secret }

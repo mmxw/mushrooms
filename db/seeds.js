@@ -4,7 +4,7 @@ const { dbURI } = require('../config/environment')
 const Mushroom = require('../models/mushroom')
 const User = require('../models/user')
 
-mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true }, (err, db) => {
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: false }, (err, db) => {
   if (err) return console.log(err)
   db.dropDatabase()
     .then(() => {
